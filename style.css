@@ -1,0 +1,72 @@
+@font-face{
+  font-family: 'Gilroy';
+  src: url('Gilroy-Light.otf') format('opentype');
+}
+
+@font-face{
+  font-family: 'ChicagoFLF';
+  src: url('ChicagoFLF.ttf') format('truetype');
+}
+
+.toolbar {
+    background: #505050; 
+    border-bottom: 1vw solid #909090; 
+    height: 5vw;
+    left: 0;
+    overflow-wrap: normal;
+    padding-left: 5%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.button {
+  background: #252525;
+  border-radius: 0.3vw;
+  color: #FAEBD7;
+  display: inline-block;
+  font-family: 'ChicagoFLF';
+  margin-right: 1vw;
+  margin-top: 1vw;
+  padding: 0.7vw;
+  position: relative;
+}
+
+.select {
+  background: #909090;
+}
+
+.home {
+  color: Gainsboro;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 6vw;
+  font-style: oblique;
+  margin-top: 10vw;
+}
+
+.detail {
+  color:lightblue;
+  font-family:'Gilroy';
+  font-size:4vw;
+}
+
+html {
+  min-height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+footer {
+  background: lightblue;
+  bottom: 0;
+  color: darkblue;
+  float: left;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 2vw;
+  height: 3vw;
+  left: 0;
+  overflow: hidden;
+  padding-left: 1vw;
+  position: absolute;
+  width: 100%;
+}
