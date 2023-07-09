@@ -1,11 +1,11 @@
 @font-face{
   font-family: 'Gilroy';
-  src: url('Gilroy-Light.otf') format('opentype');
+  src: url('https://github.com/Plackett/dmalsan/raw/main/Gilroy-ExtraBold.otf') format('opentype');
 }
 
 @font-face{
   font-family: 'ChicagoFLF';
-  src: url('ChicagoFLF.ttf') format('truetype');
+  src: url('https://github.com/Plackett/dmalsan/raw/main/ChicagoFLF.ttf') format('truetype');
 }
 
 .toolbar {
