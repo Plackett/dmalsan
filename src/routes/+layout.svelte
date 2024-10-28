@@ -28,7 +28,7 @@
 		<a href="mailto:krinos@cs.fsu.edu">Contact</a>
   		<a href="https://www.github.com/Plackett/dmalsan">Source</a>
   		<p>&copy; Niko Krinos 2024</p>
-  		<a href="./LICENSE.md">MIT License</a>
+  		<a href="https://github.com/Plackett/dmalsan/blob/617d734b9e12f545b36ab11cfa68a6c9788ddaba/LICENSE.md">MIT License</a>
 	</footer>
 </div>
 

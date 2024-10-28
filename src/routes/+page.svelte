@@ -5,7 +5,6 @@
 
 <script>
 	import { onMount } from 'svelte';
-	import Portrait2023 from "$lib/images/portrait2023.jpg";
 
 	let scrollY = 0;
 	let imageStyle = '';
@@ -33,10 +32,11 @@
 </script>
 
 <section class="w-full h-full font-mono flex-wrap">
+	<!-- svelte-ignore a11y_img_redundant_alt -->
 	<img
 		id="me"
 		class="float-right w-96 h-auto ml-10 shadow-slate-700 shadow-xl rounded-md"
-		src={Portrait2023}
+		src="./images/portrait2023.jpg"
 		alt="This is a picture of my face"
 		style={imageStyle}
 	/>
@@ -45,7 +45,7 @@
 			John-Nicholas (Niko) Krinos
 		</h1>
 		<h2>
-			Aspiring software developer @ FSU
+			Aspiring software developer and undergraduate student majoring in Computer Science @ FSU in the University Honors Program
 		</h2>
 		<a href="mailto:krinos@cs.fsu.edu">
 			krinos@cs.fsu.edu
