@@ -12,10 +12,11 @@
 		{@render children()}
 	</main>
 
-	<footer>
-		<p>
-			visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to learn about SvelteKit
-		</p>
+	<footer class="flex gap-2">
+		<a href="works.html">Contact</a>
+  		<a href="https://www.github.com/Plackett/dmalsan">Source</a>
+  		<p>&copy; Niko Krinos 2024</p>
+  		<a href="https://github.com/Plackett/dmalsan/blob/main/LICENSE">MIT License</a>
 	</footer>
 </div>
 
@@ -39,7 +40,6 @@
 
 	footer {
 		display: flex;
-		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		padding: 12px;
