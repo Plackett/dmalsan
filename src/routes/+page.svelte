@@ -9,6 +9,7 @@
 
 	let scrollY = 0;
 	let imageStyle = '';
+	let divStyle = '';
 
 	onMount(() => {
 		const handleScroll = () => {
@@ -27,27 +28,28 @@
 		const opacity = Math.max(0, 1 - scrollY / 500);
 		const translateY = -scrollY * 0.5;
 		imageStyle = `transform: translateY(${translateY}px); opacity: ${opacity};`;
+		divStyle = `transform: translateY(${translateY}px);`;
 	}
 </script>
 
-<section class="w-full h-full font-mono" style="height: 200vh">
+<section class="w-full h-full font-mono flex-wrap">
 	<img
 		id="me"
-		class="float-right w-96 h-auto shadow-slate-700 shadow-xl rounded-md"
+		class="float-right w-96 h-auto ml-10 shadow-slate-700 shadow-xl rounded-md"
 		src={Portrait2023}
 		alt="This is a picture of my face"
 		style={imageStyle}
 	/>
-	<div class="mr-20">
+	<div class="mr-20" style={divStyle}>
 		<h1 class="text-2xl">
 			John-Nicholas (Niko) Krinos
 		</h1>
 		<h2>
 			Aspiring software developer @ FSU
 		</h2>
-		<h3 class="text-slate-500">
+		<a href="mailto:krinos@cs.fsu.edu">
 			krinos@cs.fsu.edu
-		</h3>
+		</a>
 		<p class="pr-10">This website will serve as my portfolio and will be updated as I work on more projects!</p>
 		<h1 class="text-2xl pt-20">Latest Projects:</h1>
 	</div>
@@ -61,7 +63,11 @@
 	}
 
 	img {
-		transition: opacity 0.3s, transform 0.3s;
+		transition: opacity 0.4s, transform 0.4s;
+	}
+
+	div {
+		transition: transform 1.0s;
 	}
 
 </style>

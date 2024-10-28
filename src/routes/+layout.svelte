@@ -1,15 +1,27 @@
 <script lang="ts">
 	import Header from './Header.svelte';
 	import '../app.css';
-	
-	let { children } = $props();
+	import { slide } from 'svelte/transition';
+	import { page } from '$app/stores';
+	import { elasticIn, linear } from 'svelte/easing';
+	export let data;
+
+	const slideParams = {
+        duration: 1000,
+        easing: linear,
+        axis: "x"
+    };
 </script>
 
 <div class="app">
 	<Header />
-
+	
 	<main>
-		{@render children()}
+		{#key data.path}
+			<div transition:slide={slideParams}>
+				<slot/>
+			</div>
+		{/key}
 	</main>
 
 	<footer class="flex gap-2">

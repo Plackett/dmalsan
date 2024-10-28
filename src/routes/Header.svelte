@@ -3,7 +3,7 @@
 	import github from '$lib/images/github.svg';
 </script>
 
-<header class="w-screen">
+<header class="w-screen sticky backdrop-blur-sm">
 
 	<nav class="w-screen">
 		<ul class="w-screen">
@@ -22,38 +22,15 @@
 
 <style>
 	header {
-		display: flex;
+		overflow: visible;
+		z-index: 100;
 		justify-content: space-between;
-	}
-
-	.corner {
-		width: 3em;
-		height: 3em;
-	}
-
-	.corner a {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-		height: 100%;
-	}
-
-	.corner img {
-		width: 2em;
-		height: 2em;
-		object-fit: contain;
+		top: 0;
 	}
 
 	nav {
 		display: flex;
 		justify-content: center;
-	}
-
-	svg {
-		width: 2em;
-		height: 3em;
-		display: block;
 	}
 
 	ul {
@@ -65,7 +42,7 @@
 		justify-content: center;
 		align-items: center;
 		list-style: none;
-		background: #eee;
+		@apply bg-[rgba(237,233,233,0.7)];
 		@apply dark:bg-[rgba(112,103,103,0.7)];
 		background-size: contain;
 	}
