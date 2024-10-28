@@ -25,10 +25,10 @@
 	</main>
 
 	<footer class="flex gap-2">
-		<a href="works.html">Contact</a>
+		<a href="mailto:krinos@cs.fsu.edu">Contact</a>
   		<a href="https://www.github.com/Plackett/dmalsan">Source</a>
   		<p>&copy; Niko Krinos 2024</p>
-  		<a href="https://github.com/Plackett/dmalsan/blob/main/LICENSE">MIT License</a>
+  		<a href="./LICENSE.md">MIT License</a>
 	</footer>
 </div>
 
