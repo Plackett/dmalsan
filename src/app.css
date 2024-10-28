@@ -34,7 +34,7 @@ body {
 	@apply dark:bg-[#1f1f1f];
 }
 
-p {
+p, h1, li {
 	color: black;
 	@apply dark:text-[#eee]
 }
