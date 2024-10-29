@@ -1,10 +1,8 @@
 <script lang="ts">
 	import Header from './Header.svelte';
 	import '../app.css';
-	import { slide } from 'svelte/transition';
-	import { page } from '$app/stores';
 	import { elasticIn, linear } from 'svelte/easing';
-	export let data;
+	import ViewTransition from './navigation.svelte';
 
 	const slideParams = {
         duration: 1000,
@@ -14,16 +12,11 @@
 </script>
 
 <div class="app">
+	<ViewTransition/>
 	<Header />
-	
 	<main>
-		{#key data.path}
-			<div transition:slide={slideParams}>
-				<slot/>
-			</div>
-		{/key}
+		<slot/>
 	</main>
-
 	<footer class="flex gap-2">
 		<a href="mailto:krinos@cs.fsu.edu">Contact</a>
   		<a href="https://www.github.com/Plackett/dmalsan">Source</a>

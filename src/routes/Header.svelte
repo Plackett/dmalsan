@@ -1,9 +1,17 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import Icon from '@iconify/svelte';
 </script>
 
 <header class="w-screen sticky backdrop-blur-sm">
-
+	<div class="fixed left-0 z-10 mt-1 flex flex-row">
+		<a aria-label="Github" href="https://github.com/Plackett/" class="pl-0 pr-0">
+			<Icon icon="mdi:github" class="w-10 h-10"/>
+		</a>
+		<a aria-label="LinkedIn" href="https://www.linkedin.com/in/niko-krinos-67aa99219/" class="pl-0 pr-0">
+			<Icon icon="mdi:linkedin" class="w-10 h-10"/>
+		</a>
+	</div>
 	<nav class="w-screen">
 		<ul class="w-screen">
 			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
@@ -22,7 +30,7 @@
 <style>
 	header {
 		overflow: visible;
-		z-index: 100;
+		z-index: 9;
 		justify-content: space-between;
 		top: 0;
 	}
@@ -63,11 +71,9 @@
 		border-top: var(--size) solid var(--color-theme-1);
 	}
 
-	nav a {
+	a {
 		display: flex;
 		height: 100%;
-		align-items: center;
-		padding: 0 0.5rem;
 		color: var(--color-text);
 		font-weight: 700;
 		font-size: 0.8rem;
@@ -76,6 +82,11 @@
 		text-decoration: none;
 		transition: color 0.2s linear;
 		@apply dark:text-[#eee]
+	}
+
+	nav a {
+		align-items: center;
+		padding: 0 0.5rem;
 	}
 
 	a:hover {
