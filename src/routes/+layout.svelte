@@ -18,6 +18,7 @@
 		<slot/>
 	</main>
 	<footer class="flex gap-2">
+		<p>Developed using <a href="https://svelte.dev/">Sveltekit</a> and <a href="https://tailwindcss.com/">Tailwind CSS</a> | </p>
 		<a href="mailto:krinos@cs.fsu.edu">Contact</a>
   		<a href="https://www.github.com/Plackett/dmalsan">Source</a>
   		<p>&copy; Niko Krinos 2024</p>

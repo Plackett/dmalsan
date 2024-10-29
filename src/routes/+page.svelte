@@ -6,7 +6,6 @@
 <script>
 	import Icon from '@iconify/svelte';
 	import { onMount } from 'svelte';
-	import {Timeline, TimelineItem } from 'flowbite-svelte';
 
 	let scrollY = 0;
 	let imageStyle = '';
@@ -42,9 +41,15 @@
 		style={imageStyle}
 	/>
 	<div class="mr-20 ">
-		<h1 class="text-2xl">
-			John-Nicholas (Niko) Krinos
-		</h1>
+			<div class=" mt-1 flex flex-row">
+				<h1 class="text-2xl">John-Nicholas (Niko) Krinos</h1>
+				<a aria-label="Github" href="https://github.com/Plackett/" class="pl-0 pr-0 icon">
+					<Icon icon="mdi:github" class="w-8 h-8"/>
+				</a>
+				<a aria-label="LinkedIn" href="https://www.linkedin.com/in/niko-krinos-67aa99219/" class="pl-0 pr-0 icon">
+					<Icon icon="mdi:linkedin" class="w-8 h-8"/>
+				</a>
+			</div>
 		<h2>
 			Aspiring software developer and undergraduate student majoring in Computer Science @ FSU in the University Honors Program
 		</h2>
@@ -53,13 +58,9 @@
 		</a>
 		<p class="pr-10">This website will serve as my portfolio and will be updated as I work on more projects!</p>
 		<h1 class="text-2xl pt-20">Latest Projects:</h1>
-		<Timeline>
-			<TimelineItem date="Sep 2024 - Nov 2024">
-				<svelte:fragment slot="icon">
-      				<span class="flex absolute -start-3 justify-center items-center w-6 h-6 bg-primary-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900">
-        				<Icon icon="mdi:smartphone-sound" />
-      				</span>
-    			</svelte:fragment>
+		<ol class="relative border-s border-gray-200 dark:border-gray-700 list-disc"> 
+			<li class="list-image-[url(`data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M19.1 8.7c1.8 1.8 1.8 4.6 0 6.5l1 1c2.5-2.3 2.5-6.1 0-8.5zM18 9.8l-1 1c.5.7.5 1.6 0 2.3l1 1c1.2-1.2 1.2-3 0-4.3M14 1H4a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2m0 19H4V4h10z'/%3E%3C/svg%3E)`]">
+				<h1>Sep 2024 - Nov 2024</h1>
 				<a href="https://github.com/Plackett/Lyrics2go-fall2024" target="_blank" rel="noopener noreferrer">
 					<div class="pillbottle">
 						<h2 class="text-xl pt-5">Lyrics2go</h2>
@@ -74,8 +75,9 @@
 						<span class="pill">Mobile Application Development</span>
 					</div>
 				</a>
-			</TimelineItem>
-			<TimelineItem date="Aug 2023 - May 2024">
+			</li>
+			<li>
+				<h1>Aug 2023 - May 2024</h1>
 				<a href="https://sites.google.com/view/wizterria/home" target="_blank" rel="noopener noreferrer">
 					<div class="pillbottle">
 						<h2 class="text-xl pt-5">Wizterria</h2>
@@ -90,8 +92,9 @@
 						<span class="pill">Team Collaboration</span>
 					</div>
 				</a>
-			</TimelineItem>
-			<TimelineItem date="Aug 2020 - Jun 2021">
+			</li>
+			<li>
+				<h1>Aug 2020 - Jun 2021</h1>
 				<h2 class="text-xl pt-5">Six Degrees</h2>
 				<p><strong>Front-End Developer</strong></p>
 				<p>With a team of two other students, we created a mobile app for iOS and Android using Dart on the Flutter framework. We placed 10th nationally at the Future Business Leaders of America National Leadership Conference for the 2020-2021 school year.</p>
@@ -100,8 +103,8 @@
 					<span class="pill">Flutter</span>
 					<span class="pill">Mobile Application Development</span>
 				</div>
-			</TimelineItem>
-		</Timeline>
+			</li>
+		</ol>
 	</div>
 </section>
 
@@ -126,6 +129,16 @@
 
 	div {
 		transition: transform 1.0s;
+	}
+
+	.icon {
+		color: rgba(0, 0, 0, 0.7);
+		@apply dark:text-[#eee];
+		transition: color 0.2s linear;
+	}
+
+	.icon:hover {
+		color: rgb(50,119,255);
 	}
 
 </style>

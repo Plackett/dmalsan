@@ -4,14 +4,6 @@
 </script>
 
 <header class="w-screen sticky backdrop-blur-sm">
-	<div class="fixed left-0 z-10 mt-1 flex flex-row">
-		<a aria-label="Github" href="https://github.com/Plackett/" class="pl-0 pr-0">
-			<Icon icon="mdi:github" class="w-10 h-10"/>
-		</a>
-		<a aria-label="LinkedIn" href="https://www.linkedin.com/in/niko-krinos-67aa99219/" class="pl-0 pr-0">
-			<Icon icon="mdi:linkedin" class="w-10 h-10"/>
-		</a>
-	</div>
 	<nav class="w-screen">
 		<ul class="w-screen">
 			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
