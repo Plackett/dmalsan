@@ -86,9 +86,9 @@
 		alt="This is a picture of my face"
 		style={imageStyle}
 	/>
-	<div class="mr-20 ">
-			<div class=" mt-1 flex flex-row">
-				<h1 class="text-2xl">John-Nicholas (Niko) Krinos</h1>
+	<div class="mr-20">
+			<div class=" mt-1 flex flex-row min-w-32">
+				<h1 class="text-2xl">John-Nicholas (Niko) Krinos </h1>
 				<a aria-label="Github" href="https://github.com/Plackett/" class="pl-0 pr-0 icon">
 					<Icon icon="mdi:github" class="w-8 h-8"/>
 				</a>
@@ -102,53 +102,59 @@
 		<a href="mailto:krinos@cs.fsu.edu">
 			krinos@cs.fsu.edu
 		</a>
-		<p class="pr-10">This website will serve as my portfolio and will be updated as I work on more projects!</p>
-		<h1 class="text-2xl pt-20">Latest Projects:</h1>
-		<div class="grid grid-cols-[2fr,minmax(1px,9fr)] gap-x-[1px] bg-slate-100 w-full">
-			{#each data as item}
-				<div class="dark:bg-[#1f1f1f] bg-[rgb(255,253,251)] p-3">
-					<p class="text-right relative">
-						{item.from.toLocaleDateString()} - {item.until.toLocaleDateString()}
-						<span class='rounded-full w-2 h-2 bg-slate-100 absolute -right-4 top-2'>
-						</span>
-					</p>
-				</div>
-				{#if item.link != null}
-					<a href="{item.link.href}">
-						<div class="flex flex-col dark:hover:bg-[#474747] hover:bg-slate-300 dark:bg-[#1f1f1f] bg-[rgb(255,253,251)] p-3">
-							<div class="pillbottle">
-								<h2 class="text-xl pt-5">{item.name}</h2>
-								<Icon icon="solar:arrow-right-up-linear" class="w-4 h-4 mt-5"/>
-							</div>
-							<h3 class="text-md text-neutral-700">{item.role}</h3>
-							<p class="mb-2">{item.description}</p>
-							<div class="pillbottle">
-							{#each item.pills as pill}
-								<div class="pill">
-									{pill}
+		<p class="pr-10">This website is my continually updated portfolio!</p>
+		<h1 id="About" class="text-2xl pt-2">About Me</h1>
+		<p class="mb-1">My name is Niko Krinos and I was born in Tampa, Florida. I started off programming with Python 2.7 and Scratch when I was about ten years old but found myself liking Lua and C++ much better.</p>
+		<p class="mb-1">Following this I started playing Minecraft and wanted to make custom modifications or mods for the game so I taught myself Java and wrote a couple <a href="https://github.com/Plackett/springnions">mods.</a></p>
+		<p class="mb-1">Since then I have entered multiple programming competitions and <a href="https://plackett.itch.io">game jams</a> - game design projects that have tight deadlines.</p>
+		<p class="mb-1">After attending a game design magnet in high school and competiting my <a href="https://sites.google.com/view/wizterria/home">capstone project</a> I realized that the game design field was not for me. Nowadays I love writing general purpose software and I currently have a passion project I've been working on in the background while I complete my degree at FSU.</p>
+		<div class="flex flex-col justify-end">
+			<h1 class="text-2xl text-left" id="Projects">Latest Projects:</h1>
+			<div class="grid grid-cols-[2fr,minmax(1px,9fr)] gap-x-[1px] dark:bg-slate-100 bg-black w-full">
+				{#each data as item}
+					<div class="dark:bg-[#1f1f1f] bg-[rgb(255,253,251)] p-3">
+						<p class="text-right relative">
+							{item.from.toLocaleDateString()} - {item.until.toLocaleDateString()}
+							<span class='rounded-full w-2 h-2 dark:bg-slate-100 bg-black absolute -right-4 top-2'>
+							</span>
+						</p>
+					</div>
+					{#if item.link != null}
+						<a href="{item.link.href}">
+							<div class="flex flex-col dark:hover:bg-[#474747] hover:bg-slate-300 dark:bg-[#1f1f1f] bg-[rgb(255,253,251)] p-3">
+								<div class="pillbottle">
+									<h2 class="text-xl pt-5">{item.name}</h2>
+									<Icon icon="solar:arrow-right-up-linear" class="w-4 h-4 mt-5"/>
 								</div>
-							{/each}
+								<h3 class="text-md text-neutral-700">{item.role}</h3>
+								<p class="mb-2">{item.description}</p>
+								<div class="pillbottle">
+								{#each item.pills as pill}
+									<div class="pill">
+										{pill}
+									</div>
+								{/each}
+								</div>
 							</div>
+						</a>
+					{:else}
+					<div class="flex flex-col dark:hover:bg-[#474747] hover:bg-slate-300 dark:bg-[#1f1f1f] bg-[rgb(255,253,251)] p-3">
+						<div class="pillbottle">
+							<h2 class="text-xl pt-5">{item.name}</h2>
 						</div>
-					</a>
-				{:else}
-				<div class="flex flex-col dark:hover:bg-[#474747] hover:bg-slate-300 dark:bg-[#1f1f1f] bg-[rgb(255,253,251)] p-3">
-					<div class="pillbottle">
-						<h2 class="text-xl pt-5">{item.name}</h2>
-						<Icon icon="solar:arrow-right-up-linear" class="w-4 h-4 mt-5"/>
-					</div>
-					<h3 class="text-md text-neutral-700">{item.role}</h3>
-					<p class="mb-2">{item.description}</p>
-					<div class="pillbottle">
-					{#each item.pills as pill}
-						<div class="pill">
-							{pill}
+						<h3 class="text-md text-neutral-700">{item.role}</h3>
+						<p class="mb-2">{item.description}</p>
+						<div class="pillbottle">
+						{#each item.pills as pill}
+							<div class="pill">
+								{pill}
+							</div>
+						{/each}
 						</div>
-					{/each}
 					</div>
-				</div>
-			{/if}
-			{/each}
+				{/if}
+				{/each}
+			</div>
 		</div>
 	</div>
 </section>

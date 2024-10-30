@@ -1,19 +1,18 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import Icon from '@iconify/svelte';
 </script>
 
 <header class="w-screen sticky backdrop-blur-sm">
 	<nav class="w-screen">
 		<ul class="w-screen">
-			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-				<a href="/">Home</a>
+			<li aria-current={$page.url.pathname === '/#Home' ? 'page' : undefined}>
+				<a href="#Home">Home</a>
 			</li>
-			<li aria-current={$page.url.pathname === '/about' ? 'page' : undefined}>
-				<a href="/about">About</a>
+			<li aria-current={$page.url.pathname === '/#About' ? 'page' : undefined}>
+				<a href="#About">About</a>
 			</li>
-			<li aria-current={$page.url.pathname.startsWith('/projects') ? 'page' : undefined}>
-				<a href="/projects">Projects</a>
+			<li aria-current={$page.url.pathname === '/#Projects' ? 'page' : undefined}>
+				<a href="#Projects">Projects</a>
 			</li>
 		</ul>
 	</nav>

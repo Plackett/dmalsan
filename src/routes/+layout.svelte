@@ -12,6 +12,7 @@
 </script>
 
 <div class="app">
+	<div id="Home" ></div>
 	<ViewTransition/>
 	<Header />
 	<main>
