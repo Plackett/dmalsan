@@ -3,7 +3,7 @@
 	<meta name="description" content="Niko Krinos portfolio website" />
 </svelte:head>
 
-<script>
+<script lang="ts">
 	import Icon from '@iconify/svelte';
 	import { onMount } from 'svelte';
 
@@ -29,6 +29,52 @@
 		const translateY = -scrollY * 0.5;
 		imageStyle = `opacity: ${opacity};`;
 	}
+
+	type Item = {
+        name: string,
+        from: Date,
+        until: Date,
+        role: string,
+        description: string,
+        pills: string[],
+        link: null | {href: string, text: string}
+    }
+
+	const data: Item[] = [
+        {
+            name: "Lyrics2go",
+            from: new Date("September 1, 2024"),
+            until: new Date("November 1, 2024"),
+            role: "Code Education - Project Manager",
+            description: "We created a mobile app for iOS and Android using React Native on the Expo Framework that can display the lyrics to any song recognized by the MusicBrainz API. This project lasted for four sprints, with the last sprint dedicated to producing a presentation describing the app.",
+            pills: ["Git", "Github", "React Native", "Mobile Application Development"],
+            link: {
+                href: "https://github.com/Plackett/Lyrics2go-fall2024",
+                text: "View the Lyrics2go repository on Github"
+            }
+        },
+        {
+            name: "Wizterria",
+            from: new Date("August 1, 2023"),
+            until: new Date("May 1, 2024"),
+            role: "Programming Director",
+            description: "Developed as a video game using C++ with SDL 3.0, Wizterria offers an engaging interactive experience.",
+            pills: ["C++", "SDL 3.0", "Game Development", "Team Collaboration"],
+            link: {
+                href: "https://sites.google.com/view/wizterria/home",
+                text: "Visit the Wizterria project site"
+            }
+        },
+        {
+            name: "Six Degrees",
+            from: new Date("August 1, 2020"),
+            until: new Date("June 1, 2021"),
+            role: "Front-End Developer",
+            description: "With a team of two other students, we created a mobile app for iOS and Android using Dart on the Flutter framework. We placed 10th nationally at the Future Business Leaders of America National Leadership Conference for the 2020-2021 school year.",
+            pills: ["Dart", "Flutter", "Mobile Application Development"],
+            link: null
+        }
+    ]
 </script>
 
 <section class="w-full h-full font-mono flex-wrap">
@@ -58,53 +104,52 @@
 		</a>
 		<p class="pr-10">This website will serve as my portfolio and will be updated as I work on more projects!</p>
 		<h1 class="text-2xl pt-20">Latest Projects:</h1>
-		<ol class="relative border-s border-gray-200 dark:border-gray-700 list-disc"> 
-			<li class="list-image-[url(`data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M19.1 8.7c1.8 1.8 1.8 4.6 0 6.5l1 1c2.5-2.3 2.5-6.1 0-8.5zM18 9.8l-1 1c.5.7.5 1.6 0 2.3l1 1c1.2-1.2 1.2-3 0-4.3M14 1H4a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2m0 19H4V4h10z'/%3E%3C/svg%3E)`]">
-				<h1>Sep 2024 - Nov 2024</h1>
-				<a href="https://github.com/Plackett/Lyrics2go-fall2024" target="_blank" rel="noopener noreferrer">
-					<div class="pillbottle">
-						<h2 class="text-xl pt-5">Lyrics2go</h2>
-						<Icon icon="solar:arrow-right-up-linear" class="w-4 h-4 mt-5"/>
-					</div>
-					<p><strong>Code Education - Project Manager</strong></p>
-					<p>We created a mobile app for iOS and Android using React Native on the Expo Framework that can display the lyrics to any song recognized by the MusicBrainz API. This project lasted for four sprints, with the last sprint dedicated to producing a presentation describing the app.</p>
-					<div class="pillbottle">
-						<span class="pill">Git</span>
-						<span class="pill">GitHub</span>
-						<span class="pill">React Native</span>
-						<span class="pill">Mobile Application Development</span>
-					</div>
-				</a>
-			</li>
-			<li>
-				<h1>Aug 2023 - May 2024</h1>
-				<a href="https://sites.google.com/view/wizterria/home" target="_blank" rel="noopener noreferrer">
-					<div class="pillbottle">
-						<h2 class="text-xl pt-5">Wizterria</h2>
-						<Icon icon="solar:arrow-right-up-linear" class="w-4 h-4 mt-5"/>
-					</div>
-					<p><strong>Programming Director</strong></p>
-					<p>Developed as a video game using C++ with SDL 3.0, Wizterria offers an engaging interactive experience.</p>
-					<div class="pillbottle">
-						<span class="pill">C++</span>
-						<span class="pill">SDL 3.0</span>
-						<span class="pill">Game Development</span>
-						<span class="pill">Team Collaboration</span>
-					</div>
-				</a>
-			</li>
-			<li>
-				<h1>Aug 2020 - Jun 2021</h1>
-				<h2 class="text-xl pt-5">Six Degrees</h2>
-				<p><strong>Front-End Developer</strong></p>
-				<p>With a team of two other students, we created a mobile app for iOS and Android using Dart on the Flutter framework. We placed 10th nationally at the Future Business Leaders of America National Leadership Conference for the 2020-2021 school year.</p>
-				<div class="pillbottle">
-					<span class="pill">Dart</span>
-					<span class="pill">Flutter</span>
-					<span class="pill">Mobile Application Development</span>
+		<div class="grid grid-cols-[2fr,minmax(1px,9fr)] gap-x-[1px] bg-slate-100 w-full">
+			{#each data as item}
+				<div class="dark:bg-[#1f1f1f] bg-[rgb(255,253,251)] p-3">
+					<p class="text-right relative">
+						{item.from.toLocaleDateString()} - {item.until.toLocaleDateString()}
+						<span class='rounded-full w-2 h-2 bg-slate-100 absolute -right-4 top-2'>
+						</span>
+					</p>
 				</div>
-			</li>
-		</ol>
+				{#if item.link != null}
+					<a href="{item.link.href}">
+						<div class="flex flex-col dark:hover:bg-[#474747] hover:bg-slate-300 dark:bg-[#1f1f1f] bg-[rgb(255,253,251)] p-3">
+							<div class="pillbottle">
+								<h2 class="text-xl pt-5">{item.name}</h2>
+								<Icon icon="solar:arrow-right-up-linear" class="w-4 h-4 mt-5"/>
+							</div>
+							<h3 class="text-md text-neutral-700">{item.role}</h3>
+							<p class="mb-2">{item.description}</p>
+							<div class="pillbottle">
+							{#each item.pills as pill}
+								<div class="pill">
+									{pill}
+								</div>
+							{/each}
+							</div>
+						</div>
+					</a>
+				{:else}
+				<div class="flex flex-col dark:hover:bg-[#474747] hover:bg-slate-300 dark:bg-[#1f1f1f] bg-[rgb(255,253,251)] p-3">
+					<div class="pillbottle">
+						<h2 class="text-xl pt-5">{item.name}</h2>
+						<Icon icon="solar:arrow-right-up-linear" class="w-4 h-4 mt-5"/>
+					</div>
+					<h3 class="text-md text-neutral-700">{item.role}</h3>
+					<p class="mb-2">{item.description}</p>
+					<div class="pillbottle">
+					{#each item.pills as pill}
+						<div class="pill">
+							{pill}
+						</div>
+					{/each}
+					</div>
+				</div>
+			{/if}
+			{/each}
+		</div>
 	</div>
 </section>
 
@@ -116,7 +161,7 @@
 	}
 
 	.pillbottle {
-		@apply flex flex-row
+		@apply flex flex-row flex-wrap gap-y-1
 	}
 
 	.pill {
