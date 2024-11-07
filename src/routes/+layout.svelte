@@ -1,8 +1,13 @@
 <script lang="ts">
 	import Header from './Header.svelte';
+	import { page } from '$app/stores';
 	import '../app.css';
 	import { elasticIn, linear } from 'svelte/easing';
 	import ViewTransition from './navigation.svelte';
+	import { Drawer, Sidebar } from 'flowbite-svelte';
+	import SidebarGroup from 'flowbite-svelte/SidebarGroup.svelte';
+	import SidebarItem from 'flowbite-svelte/SidebarItem.svelte';
+	import SidebarWrapper from 'flowbite-svelte/SidebarWrapper.svelte';
 
 	const slideParams = {
         duration: 1000,
@@ -15,6 +20,29 @@
 	<div id="Home" ></div>
 	<ViewTransition/>
 	<Header />
+	<Drawer>
+		<Sidebar>
+			<SidebarWrapper>
+				<SidebarGroup>
+					<SidebarItem>
+						<li aria-current={$page.url.pathname === '/#Home' ? 'page' : undefined}>
+							<a href="#Home">Home</a>
+						</li>
+					</SidebarItem>
+					<SidebarItem>
+						<li aria-current={$page.url.pathname === '/#About' ? 'page' : undefined}>
+							<a href="#About">About</a>
+						</li>
+					</SidebarItem>
+					<SidebarItem>
+						<li aria-current={$page.url.pathname === '/#Projects' ? 'page' : undefined}>
+							<a href="#Projects">Projects</a>
+						</li>
+					</SidebarItem>
+				</SidebarGroup>
+			</SidebarWrapper>
+		</Sidebar>
+	</Drawer>
 	<main>
 		<slot/>
 	</main>
