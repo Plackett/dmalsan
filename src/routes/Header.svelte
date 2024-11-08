@@ -2,17 +2,20 @@
 	import { page } from '$app/stores';
 </script>
 
-<header class="w-screen sticky backdrop-blur-sm">
-	<nav class="w-screen">
-		<ul class="w-screen">
-			<li aria-current={$page.url.pathname === '/#Home' ? 'page' : undefined}>
-				<a href="#Home">Home</a>
+<header class="w-screen sticky backdrop-blur-sm font-sans font-medium">
+	<nav class="w-full">
+		<ul class="w-full">
+			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
+				<a href="/">Home</a>
 			</li>
 			<li aria-current={$page.url.pathname === '/#About' ? 'page' : undefined}>
-				<a href="#About">About</a>
+				<a href="/About">About Me</a>
 			</li>
-			<li aria-current={$page.url.pathname === '/#Projects' ? 'page' : undefined}>
-				<a href="#Projects">Projects</a>
+			<li aria-current={$page.url.pathname === '/Projects' ? 'page' : undefined}>
+				<a href="/projects">Projects</a>
+			</li>
+			<li aria-current={$page.url.pathname === '/Reflection' ? 'page' : undefined}>
+				<a href="/Reflection">Reflection</a>
 			</li>
 		</ul>
 	</nav>
@@ -40,8 +43,6 @@
 		justify-content: center;
 		align-items: center;
 		list-style: none;
-		@apply bg-[rgba(237,233,233,0.7)];
-		@apply dark:bg-[rgba(112,103,103,0.7)];
 		background-size: contain;
 	}
 
