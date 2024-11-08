@@ -5,9 +5,9 @@
 	import { elasticIn, linear } from 'svelte/easing';
 	import ViewTransition from './navigation.svelte';
 	import { Drawer, Sidebar } from 'flowbite-svelte';
-	import SidebarGroup from 'flowbite-svelte/SidebarGroup.svelte';
-	import SidebarItem from 'flowbite-svelte/SidebarItem.svelte';
-	import SidebarWrapper from 'flowbite-svelte/SidebarWrapper.svelte';
+	import { SidebarGroup }  from 'flowbite-svelte';
+	import { SidebarItem } from 'flowbite-svelte';
+	import { SidebarWrapper } from 'flowbite-svelte';
 
 	const slideParams = {
         duration: 1000,
@@ -20,7 +20,7 @@
 	<div id="Home" ></div>
 	<ViewTransition/>
 	<Header />
-	<Drawer>
+	<Drawer hidden={false}>
 		<Sidebar>
 			<SidebarWrapper>
 				<SidebarGroup>
