@@ -15,44 +15,28 @@
         axis: "x"
     };
 </script>
-
+<Header />
 <div class="app">
-	<div id="Home" ></div>
 	<ViewTransition/>
-	<Header />
-	<Drawer hidden={false}>
-		<Sidebar>
-			<SidebarWrapper>
-				<SidebarGroup>
-					<SidebarItem>
-						<li aria-current={$page.url.pathname === '/#Home' ? 'page' : undefined}>
-							<a href="#Home">Home</a>
-						</li>
-					</SidebarItem>
-					<SidebarItem>
-						<li aria-current={$page.url.pathname === '/#About' ? 'page' : undefined}>
-							<a href="#About">About</a>
-						</li>
-					</SidebarItem>
-					<SidebarItem>
-						<li aria-current={$page.url.pathname === '/#Projects' ? 'page' : undefined}>
-							<a href="#Projects">Projects</a>
-						</li>
-					</SidebarItem>
-				</SidebarGroup>
-			</SidebarWrapper>
-		</Sidebar>
-	</Drawer>
-	<main>
-		<slot/>
-	</main>
-	<footer class="flex gap-2">
-		<p>Developed using <a href="https://svelte.dev/">Sveltekit</a> and <a href="https://tailwindcss.com/">Tailwind CSS</a> | </p>
-		<a href="mailto:krinos@cs.fsu.edu">Contact</a>
-  		<a href="https://www.github.com/Plackett/dmalsan">Source</a>
-  		<p>&copy; Niko Krinos 2024</p>
-  		<a href="https://github.com/Plackett/dmalsan/blob/617d734b9e12f545b36ab11cfa68a6c9788ddaba/LICENSE.md">MIT License</a>
-	</footer>
+	<div class="flex flex-col w-full h-screen overflow-clip items-stretch">
+		<header class="min-h-16 justify-center flex flex-row"> 
+		</header>
+		<div class="flex flex-row items-stretch h-full">
+		  <aside class="min-w-48 overflow-y-auto flex flex-col gap-2 px-4">
+
+		  </aside>
+		  <main class="w-full overflow-y-auto p-4 flex flex-col items-center">
+			<slot/>
+		  </main>
+		</div>
+		<footer class="flex gap-2">
+			<p>Developed using <a href="https://svelte.dev/">Sveltekit</a> and <a href="https://tailwindcss.com/">Tailwind CSS</a> | </p>
+			<a href="mailto:krinos@cs.fsu.edu">Contact</a>
+			  <a href="https://www.github.com/Plackett/dmalsan">Source</a>
+			  <p>&copy; Niko Krinos 2024</p>
+			  <a href="https://github.com/Plackett/dmalsan/blob/617d734b9e12f545b36ab11cfa68a6c9788ddaba/LICENSE.md">MIT License</a>
+		</footer>
+	</div>
 </div>
 
 <style>
@@ -60,17 +44,6 @@
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
-	}
-
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
 	}
 
 	footer {

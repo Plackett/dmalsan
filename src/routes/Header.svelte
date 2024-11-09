@@ -2,20 +2,20 @@
 	import { page } from '$app/stores';
 </script>
 
-<header class="w-screen sticky backdrop-blur-sm font-sans font-medium">
+<header class="w-screen fixed backdrop-blur-sm font-sans font-medium">
 	<nav class="w-full">
 		<ul class="w-full">
-			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
-				<a href="/">Home</a>
+			<li aria-current={$page.url.pathname.endsWith("/") ? 'page' : undefined}>
+				<a href="./">Home</a>
 			</li>
-			<li aria-current={$page.url.pathname === '/#About' ? 'page' : undefined}>
-				<a href="/About">About Me</a>
+			<li aria-current={$page.url.pathname.endsWith("/about") ? 'page' : undefined}>
+				<a href="./about">About Me</a>
 			</li>
-			<li aria-current={$page.url.pathname === '/Projects' ? 'page' : undefined}>
-				<a href="/projects">Projects</a>
+			<li aria-current={$page.url.pathname.endsWith("/projects") ? 'page' : undefined}>
+				<a href="./projects">Projects</a>
 			</li>
-			<li aria-current={$page.url.pathname === '/Reflection' ? 'page' : undefined}>
-				<a href="/Reflection">Reflection</a>
+			<li aria-current={$page.url.pathname.endsWith("/reflection") ? 'page' : undefined}>
+				<a href="./reflection">Reflection</a>
 			</li>
 		</ul>
 	</nav>
