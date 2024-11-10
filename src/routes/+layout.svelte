@@ -15,28 +15,19 @@
         axis: "x"
     };
 </script>
-<Header />
 <div class="app">
 	<ViewTransition/>
-	<div class="flex flex-col w-full h-screen overflow-clip items-stretch">
-		<header class="min-h-16 justify-center flex flex-row"> 
-		</header>
-		<div class="flex flex-row items-stretch h-full">
-		  <aside class="min-w-48 overflow-y-auto flex flex-col gap-2 px-4">
-
-		  </aside>
-		  <main class="w-full overflow-y-auto p-4 flex flex-col items-center">
-			<slot/>
-		  </main>
-		</div>
-		<footer class="flex gap-2">
-			<p>Developed using <a href="https://svelte.dev/">Sveltekit</a> and <a href="https://tailwindcss.com/">Tailwind CSS</a> | </p>
-			<a href="mailto:krinos@cs.fsu.edu">Contact</a>
-			  <a href="https://www.github.com/Plackett/dmalsan">Source</a>
-			  <p>&copy; Niko Krinos 2024</p>
-			  <a href="https://github.com/Plackett/dmalsan/blob/617d734b9e12f545b36ab11cfa68a6c9788ddaba/LICENSE.md">MIT License</a>
-		</footer>
-	</div>
+	<Header />
+	<main class="w-full overflow-y-auto p-4 flex flex-col items-center">
+		<slot/>
+	</main>
+	<footer class="flex gap-2">
+		<p>Developed using <a href="https://svelte.dev/">Sveltekit</a> and <a href="https://tailwindcss.com/">Tailwind CSS</a> | </p>
+		<a href="mailto:krinos@cs.fsu.edu">Contact</a>
+		  <a href="https://www.github.com/Plackett/dmalsan">Source</a>
+		  <p>&copy; Niko Krinos 2024</p>
+		  <a href="https://github.com/Plackett/dmalsan/blob/617d734b9e12f545b36ab11cfa68a6c9788ddaba/LICENSE.md">MIT License</a>
+	</footer>
 </div>
 
 <style>

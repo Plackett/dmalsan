@@ -3,12 +3,12 @@
 	import Icon from '@iconify/svelte';
 </script>
 
-<header class="w-screen fixed backdrop-blur-sm font-sans font-medium">
+<header class="sticky w-screen backdrop-blur-sm font-sans font-medium flex flex-row">
+	<a class="absolute top-0 left-0 pt-3 pl-3 z-10 " href="https://calendar.app.google/E9t5gvJG9G32rg2R9">
+		<Icon class="-translate-y-2 w-7 h-7 color-[#eee] transition: color 0.2s linear;" icon="mdi:tea" />
+		Schedule a meetup!
+	</a>
 	<nav class="w-full">
-		<div class="fixed left-2 top-2 flex-row flex font-serif font-medium">
-			<Icon class="translate-y-1 w-5 h-5 text-[var(--color-main-1)]" icon="mdi:tea" />
-			<a href="https://calendar.app.google/E9t5gvJG9G32rg2R9">Schedule a meet-up!</a>
-		</div>
 		<ul class="w-full">
 			<li aria-current={$page.url.pathname.endsWith("/") ? 'page' : undefined}>
 				<a href="./">Home</a>
