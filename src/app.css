@@ -19,9 +19,14 @@
 	color: var(--color-text);
 }
 
+html {
+	--color-main-1: rgb(50,119,255);
+	--color-main-2: rgb(163,192,250);
+}
+
 footer {
-	color:rgb(50,119,255);
-	@apply dark:text-[rgb(163,192,250)]
+	color:var(--color-main-1);
+	@apply dark:text-[var(--color-main-2)]
 }
 
 a {

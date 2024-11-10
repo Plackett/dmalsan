@@ -1,9 +1,14 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import Icon from '@iconify/svelte';
 </script>
 
 <header class="w-screen fixed backdrop-blur-sm font-sans font-medium">
 	<nav class="w-full">
+		<div class="fixed left-2 top-2 flex-row flex font-serif font-medium">
+			<Icon class="translate-y-1 w-5 h-5 text-[var(--color-main-1)]" icon="mdi:tea" />
+			<a href="https://calendar.app.google/E9t5gvJG9G32rg2R9">Schedule a meet-up!</a>
+		</div>
 		<ul class="w-full">
 			<li aria-current={$page.url.pathname.endsWith("/") ? 'page' : undefined}>
 				<a href="./">Home</a>
