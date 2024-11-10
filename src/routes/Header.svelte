@@ -4,12 +4,14 @@
 </script>
 
 <header class="sticky w-screen backdrop-blur-sm font-sans font-medium flex flex-row">
-	<a class="absolute top-0 left-0 pt-3 pl-3 z-10 " href="https://calendar.app.google/E9t5gvJG9G32rg2R9">
-		<Icon class="-translate-y-2 w-7 h-7 color-[#eee] transition: color 0.2s linear;" icon="mdi:tea" />
-		Schedule a meetup!
-	</a>
 	<nav class="w-full">
 		<ul class="w-full">
+			<li>
+				<a href="https://calendar.app.google/E9t5gvJG9G32rg2R9">
+					<Icon class="w-7 h-7 color-[#eee] transition: color 0.2s linear;" icon="mdi:tea" />
+					Schedule a meetup!
+				</a>
+			</li>
 			<li aria-current={$page.url.pathname.endsWith("/") ? 'page' : undefined}>
 				<a href="./">Home</a>
 			</li>

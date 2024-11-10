@@ -15,10 +15,10 @@
         axis: "x"
     };
 </script>
-<div class="app">
+<div class="app h-screen">
 	<ViewTransition/>
 	<Header />
-	<main class="w-full overflow-y-auto p-4 flex flex-col items-center">
+	<main class="w-full h-full overflow-y-auto p-4 flex flex-col items-center">
 		<slot/>
 	</main>
 	<footer class="flex gap-2">
