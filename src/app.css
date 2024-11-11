@@ -45,7 +45,7 @@ html {
 }
 
 body {
-	background-color:rgb(255, 253, 251);
+	background-color:#F1F1F1;
 	@apply dark:bg-[#1f1f1f];
 }
 
