@@ -1,7 +1,7 @@
 <script lang="ts">
     import { onMount } from 'svelte';
   
-    let game;
+    let game: Phaser.Game;
   
     onMount(async () => {
       // Ensure Phaser is only imported in the browser
