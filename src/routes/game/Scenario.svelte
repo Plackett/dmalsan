@@ -4,6 +4,7 @@
     export let saveDecision; // Function to save the user's decision
     export let nextScenario; // Function to move to the next scenario
   
+    import Icon from "@iconify/svelte";
     let selectedDecision = 0;
   </script>
   
@@ -18,13 +19,13 @@
     </div>
   
     <!-- Decision Options -->
-    <div class="space-y-4">
+    <div class="space-y-4 flex-row flex">
       {#each scenario.decisions as decision, index}
         <button
           class="bg-gray-100 p-4 rounded-lg shadow hover:bg-gray-200 transition w-full"
           class:selected={selectedDecision === index}
           on:click={() => (selectedDecision = index)}>
-          {decision}
+          <Icon icon={decision}></Icon>
         </button>
       {/each}
     </div>

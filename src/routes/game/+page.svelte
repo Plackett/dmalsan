@@ -34,18 +34,17 @@
     }
   </script>
   
-  <main>
-    {#if screen === 'title'}
-      <TitleScreen startGame={startGame} />
-    {/if}
-    {#if screen === 'scenario'}
-      <Scenario
-        scenario={scenarios[currentScenarioIndex]}
-        saveDecision={saveDecision}
-        nextScenario={nextScenario} />
-    {/if}
-    {#if screen === 'results'}
-      <Results decisions={decisions} />
-    {/if}
-  </main>
-  
+<main>
+  {#if screen === 'title'}
+    <TitleScreen startGame={startGame} />
+  {/if}
+  {#if screen === 'scenario'}
+    <Scenario
+      scenario={scenarios[currentScenarioIndex]}
+      saveDecision={saveDecision}
+      nextScenario={nextScenario} />
+  {/if}
+  {#if screen === 'results'}
+    <Results decisions={decisions} />
+  {/if}
+</main>

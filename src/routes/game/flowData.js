@@ -3,8 +3,8 @@ export const scenarios = [
     level: 'No Automation',
     animation: 'animation-no-automation', // Animation key
     decisions: [
-      'Take full control of the car.',
-      'Delegate part of the task to technology.',
+      "bi:sign-stop-fill",
+      "fluent:arrow-turn-right-16-regular",
     ],
   },
   {
