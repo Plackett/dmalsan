@@ -3,25 +3,25 @@
 	import Icon from '@iconify/svelte';
 </script>
 
-<header class="sticky w-screen backdrop-blur-sm font-sans font-medium flex flex-row">
+<header class="sticky flex w-screen flex-row font-sans font-medium backdrop-blur-sm">
 	<nav class="w-full">
 		<ul class="w-full">
 			<li>
 				<a href="https://calendar.app.google/E9t5gvJG9G32rg2R9">
-					<Icon class="w-7 h-7 color-[#eee] transition: color 0.2s linear;" icon="mdi:tea" />
+					<Icon class="color-[#eee] transition: color 0.2s linear; h-7 w-7" icon="mdi:tea" />
 					Schedule a meetup!
 				</a>
 			</li>
-			<li aria-current={$page.url.pathname.endsWith("/") ? 'page' : undefined}>
+			<li aria-current={$page.url.pathname.endsWith('/') ? 'page' : undefined}>
 				<a href="./">Home</a>
 			</li>
-			<li aria-current={$page.url.pathname.endsWith("/about") ? 'page' : undefined}>
+			<li aria-current={$page.url.pathname.endsWith('/about') ? 'page' : undefined}>
 				<a href="./about">About Me</a>
 			</li>
-			<li aria-current={$page.url.pathname.endsWith("/projects") ? 'page' : undefined}>
+			<li aria-current={$page.url.pathname.endsWith('/projects') ? 'page' : undefined}>
 				<a href="./projects">Projects</a>
 			</li>
-			<li aria-current={$page.url.pathname.endsWith("/reflection") ? 'page' : undefined}>
+			<li aria-current={$page.url.pathname.endsWith('/reflection') ? 'page' : undefined}>
 				<a href="./reflection">Reflection</a>
 			</li>
 		</ul>
@@ -80,7 +80,7 @@
 		letter-spacing: 0.1em;
 		text-decoration: none;
 		transition: color 0.2s linear;
-		@apply dark:text-[#eee]
+		@apply dark:text-[#eee];
 	}
 
 	nav a {

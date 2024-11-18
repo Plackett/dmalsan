@@ -1,22 +1,25 @@
 <script>
-    export let decisions;
-  </script>
-  
-  <div class="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-6">
-    <h2 class="text-2xl md:text-4xl font-semibold mb-6 text-center">
-      Your Choices Summary
-    </h2>
-    <ul class="space-y-4">
-      {#each decisions as decision, index}
-        <li class="bg-gray-100 p-4 rounded-lg shadow">
-          <strong>Level {index + 1}:</strong> {decision}
-        </li>
-      {/each}
-    </ul>
-    <a
-      href="/"
-      class="mt-6 bg-green-500 text-white font-bold py-2 px-4 rounded hover:bg-green-600 transition">
-      Restart Game
-    </a>
-  </div>
-  
+	export let decisions;
+	export let reflections;
+</script>
+
+<div class="flex min-h-screen flex-col items-center justify-center bg-gray-50 p-6 max-w-[52rem] rounded-2xl">
+	<h2 class="mb-6 text-center text-2xl font-semibold md:text-4xl">Your Choices Summary</h2>
+	<ul class="space-y-4">
+		{#each decisions as decision, index}
+			<li class="rounded-lg bg-gray-100 p-4 shadow text-black">
+				<strong>Level {index + 1}:</strong>
+				{decision}
+				<p class="text-black">Reflection: </p>
+				{reflections[index]}
+			</li>
+		{/each}
+	</ul>
+	<a
+		href="./game.html"
+		data-sveltekit-reload
+		class="mt-6 rounded bg-green-500 px-4 py-2 font-bold text-white transition hover:bg-green-600"
+	>
+		Restart Game
+	</a>
+</div>

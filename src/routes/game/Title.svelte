@@ -1,13 +1,21 @@
 <script>
-    export let startGame;
-  </script>
-  
-  <div class="flex flex-col items-center justify-center h-screen bg-gradient-to-br from-blue-500 to-green-400 text-white">
-    <h1 class="text-4xl md:text-6xl font-bold mb-8">Self-Driving Car Ethics Quest</h1>
-    <button
-      on:click={startGame}
-      class="bg-white text-blue-600 font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-blue-100 transition">
-      Start Game
-    </button>
-  </div>
-  
+	export let startGame;
+</script>
+
+<div
+	class="flex h-screen max-w-[52rem] flex-col items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-green-400 text-white"
+>
+	<h1 class="mb-8 text-4xl font-bold md:text-6xl">The Cat Conjecture</h1>
+	<p>
+		Developed by Niko Krinos using icons from <a
+			href="https://www.researchgate.net/figure/From-left-to-right-top-to-bottom-standard-symbols-for-cruise-control-CC-adaptive_fig1_335293327"
+			>ResearchGate</a
+		>
+	</p>
+	<button
+		on:click={startGame}
+		class="rounded-lg bg-white px-6 py-3 font-bold text-blue-600 shadow-lg transition hover:bg-blue-100"
+	>
+		Start Game
+	</button>
+</div>
