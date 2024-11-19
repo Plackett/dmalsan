@@ -5,56 +5,70 @@
 	export let nextScenario; // Function to move to the next scenario
 
 	import Icon from '@iconify/svelte';
+	import { onMount } from 'svelte';
 	let selectedDecision = 0;
+
+  function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  let canvas;
+  onMount(() =>
+  {
+    const ctx = canvas.getContext("2d");
+    function resetCanvas()
+    {
+      ctx.clearRect(0,0,600,600);
+      ctx.lineWidth = 10;
+      ctx.beginPath();
+      ctx.moveTo(200,605);
+      ctx.lineTo(220,100);
+      ctx.lineTo(380,100);
+      ctx.lineTo(400,605);
+      ctx.closePath();
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(0,100);
+      ctx.lineTo(600,100);
+      ctx.closePath();
+      ctx.stroke();
+    }
+    resetCanvas();
+    ctx.beginPath();
+    ctx.setLineDash([20,20]);
+    ctx.moveTo(300,605);
+    ctx.lineTo(300,100);
+    ctx.closePath();
+    ctx.stroke();
+    // let pos = 0;
+    // let loops = 0;
+    // var nextGameTick = (new Date).getTime();
+    // var startTime = (new Date).getTime();
+
+    // async function roadLines(speed)
+    // {
+    //   while ((new Date).getTime() > nextGameTick && loops < Game.maxFrameSkip) {
+    //         pos = (pos + speed) % 20;
+    //         resetCanvas();
+    //         ctx.beginPath();
+    //         ctx.setLineDash([20,20]);
+    //         ctx.moveTo(300,605+pos);
+    //         ctx.lineTo(300,100);
+    //         ctx.closePath();
+    //         ctx.stroke();
+    //         ctx.setLineSolid();
+    //         nextGameTick += Game.skipTicks;
+    //         loops++;
+    //     }
+    // }
+    // roadLines(1);
+  });
 </script>
 
 <div
 	class="flex min-h-screen w-[52rem] flex-col items-center justify-center rounded-2xl bg-gray-50 p-6"
 >
-	<h2 class="mb-6 text-center text-2xl font-semibold md:text-4xl">
-		{scenario.level}
-	</h2>
+	<canvas id="canvasgame" bind:this={canvas} width=600px height=600px></canvas>
 
-	<!-- Animation Placeholder -->
-	<div class="h-128 mb-6 flex w-full items-center justify-center rounded-md bg-blue-100">
-		<img
-			src={scenario.animation}
-			alt="A car with the stated automation level is about to hit a cat on the road!"
-		/>
-	</div>
-
-	<!-- Decision Options -->
-	<div class="flex flex-row space-y-4">
-		{#each scenario.decisions as decision, index}
-			{#if selectedDecision === index}
-				<button
-					class="w-full rounded-lg bg-purple-200 p-4 shadow transition hover:bg-purple-300"
-					class:selected={selectedDecision === index}
-					on:click={() => (selectedDecision = index)}
-				>
-					{decision}
-				</button>
-			{:else}
-				<button
-					class="w-full rounded-lg bg-gray-100 p-4 shadow transition hover:bg-gray-200"
-					class:selected={selectedDecision === index}
-					on:click={() => (selectedDecision = index)}
-				>
-					{decision}
-				</button>
-			{/if}
-		{/each}
-	</div>
-
-	<!-- Next Button -->
-	<button
-		on:click={() => {
-			saveDecision(selectedDecision);
-			nextScenario();
-		}}
-		class="mt-6 rounded bg-blue-500 px-4 py-2 font-bold text-white transition hover:bg-blue-600"
-		disabled={selectedDecision === null}
-	>
-		Next Level
-	</button>
+	
 </div>
