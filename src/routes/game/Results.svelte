@@ -3,14 +3,16 @@
 	export let reflections;
 </script>
 
-<div class="flex min-h-screen flex-col items-center justify-center bg-gray-50 p-6 max-w-[52rem] rounded-2xl">
+<div
+	class="flex min-h-screen max-w-[52rem] flex-col items-center justify-center rounded-2xl bg-gray-50 p-6"
+>
 	<h2 class="mb-6 text-center text-2xl font-semibold md:text-4xl">Your Choices Summary</h2>
 	<ul class="space-y-4">
 		{#each decisions as decision, index}
-			<li class="rounded-lg bg-gray-100 p-4 shadow text-black">
+			<li class="rounded-lg bg-gray-100 p-4 text-black shadow">
 				<strong>Level {index + 1}:</strong>
 				{decision}
-				<p class="text-black">Reflection: </p>
+				<p class="text-black">Reflection:</p>
 				{reflections[index]}
 			</li>
 		{/each}

@@ -7,9 +7,7 @@
 >
 	<h1 class="mb-8 text-4xl font-bold md:text-6xl">The Cat Conjecture</h1>
 	<p>
-		Developed by Niko Krinos using icons from <a
-			href="https://www.researchgate.net/figure/From-left-to-right-top-to-bottom-standard-symbols-for-cruise-control-CC-adaptive_fig1_335293327"
-			>ResearchGate</a
+		Avoid hitting the cats and try out the different automation levels!
 		>
 	</p>
 	<button
