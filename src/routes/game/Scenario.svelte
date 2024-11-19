@@ -13,12 +13,47 @@
   }
 
   let canvas;
+  var carSprite = new Image();
+  carSprite.src = "./car.svg";
+  let speed = 0;
+  let angle = 0;
+
+  window.addEventListener("keydown", function (event) {
+      if (event.defaultPrevented) {
+        return;
+      }
+
+      switch (event.key) {
+        case "ArrowDown":
+          speed += 0.1;
+          break;
+        case "ArrowUp":
+          speed -= 0.1;
+          break;
+        case "ArrowLeft":
+          angle += 0.1;
+          break;
+        case "ArrowRight":
+          angle -= 0.1;
+          break;
+        default:
+          return;
+      }
+
+      event.preventDefault();
+  }, true);
+
   onMount(() =>
   {
     const ctx = canvas.getContext("2d");
+
     function resetCanvas()
     {
       ctx.clearRect(0,0,600,600);
+    }
+
+    function drawRoad()
+    {
       ctx.lineWidth = 10;
       ctx.beginPath();
       ctx.moveTo(200,605);
@@ -33,35 +68,44 @@
       ctx.closePath();
       ctx.stroke();
     }
-    resetCanvas();
-    ctx.beginPath();
-    ctx.setLineDash([20,20]);
-    ctx.moveTo(300,605);
-    ctx.lineTo(300,100);
-    ctx.closePath();
-    ctx.stroke();
-    // let pos = 0;
-    // let loops = 0;
-    // var nextGameTick = (new Date).getTime();
-    // var startTime = (new Date).getTime();
 
-    // async function roadLines(speed)
-    // {
-    //   while ((new Date).getTime() > nextGameTick && loops < Game.maxFrameSkip) {
-    //         pos = (pos + speed) % 20;
-    //         resetCanvas();
-    //         ctx.beginPath();
-    //         ctx.setLineDash([20,20]);
-    //         ctx.moveTo(300,605+pos);
-    //         ctx.lineTo(300,100);
-    //         ctx.closePath();
-    //         ctx.stroke();
-    //         ctx.setLineSolid();
-    //         nextGameTick += Game.skipTicks;
-    //         loops++;
-    //     }
-    // }
-    // roadLines(1);
+    function drawRoadLine()
+    {
+      ctx.lineWidth = 5;
+      ctx.setLineDash([40, 20]);
+      ctx.lineDashOffset = -offset;
+      ctx.beginPath();
+      ctx.moveTo(300, 600);
+      ctx.lineTo(300, 100);
+      ctx.stroke();
+      ctx.setLineDash([]);
+    }
+
+    function drawCar(a)
+    {
+      ctx.save();
+      ctx.translate(220, 400);
+      ctx.rotate(a);
+      ctx.translate(0,0);
+      ctx.drawImage(carSprite,0,0);
+      ctx.restore();
+    }
+
+    let offset = 0;
+
+    function updateGame()
+    {
+      resetCanvas();
+      drawRoad();
+      drawRoadLine(offset);
+      drawCar(angle);
+      offset = (offset + speed) % 60;
+      // natural deceleration
+      if(speed > 0) speed -= 0.001;
+      requestAnimationFrame(updateGame);
+    }
+
+    updateGame();
   });
 </script>
 
