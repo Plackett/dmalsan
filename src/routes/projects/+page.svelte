@@ -26,7 +26,7 @@
 <!-- Project 3 -->
 <h1 class="mt-4 text-center text-xl pb-2 mb-2 border-b-4" id="proj3">Project 3 - Multigenre Persuasive Campaign</h1>
 <div class="grid h-[52rem] w-full grid-cols-3 gap-4">
-	<p class="text-center">Artifact One is a web-based video game, <a href="../game.html">click here to play!</a></p>
+	<p class="text-center">Artifact One is a web-based video game, <a href="./game.html">click here to play!</a></p>
 	<div>
 		<p class="text-center"> Artifact Two is the editorial displayed below:</p>
 		<div style="position: relative; width: 100%; height: 0; padding-top: 141.4286%;
