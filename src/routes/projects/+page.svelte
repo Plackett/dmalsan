@@ -24,9 +24,19 @@
 	></object>
 </div>
 <!-- Project 3 -->
-<h1 class="mt-4 text-center text-xl">Project 3 - Multigenre Persuasive Campaign</h1>
+<h1 class="mt-4 text-center text-xl pb-2 mb-2 border-b-4" id="proj3">Project 3 - Multigenre Persuasive Campaign</h1>
 <div class="grid h-[52rem] w-full grid-cols-3 gap-4">
-	<p class="text-center">Description for project three artifact one.</p>
-	<p class="text-center">Description for project three artifact two.</p>
+	<p class="text-center">Artifact One is a web-based video game, <a href="../game.html">click here to play!</a></p>
+	<div>
+		<p class="text-center"> Artifact Two is the editorial displayed below:</p>
+		<div style="position: relative; width: 100%; height: 0; padding-top: 141.4286%;
+ 			padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ 			border-radius: 8px; will-change: transform;">
+  		<iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    		src="https://www.canva.com/design/DAGXCyG6Vy0/uMPLNH0B5HjSX5xFMMCvCA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  		</iframe>
+		</div>
+		<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGXCyG6Vy0&#x2F;uMPLNH0B5HjSX5xFMMCvCA&#x2F;view?utm_content=DAGXCyG6Vy0&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Autonomous Ethics Editorial</a>
+	</div>
 	<p class="text-center">Description for project three artifact three.</p>
 </div>
