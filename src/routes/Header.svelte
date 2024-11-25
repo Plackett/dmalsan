@@ -15,14 +15,14 @@
 			<li aria-current={$page.url.pathname.endsWith('/') ? 'page' : undefined}>
 				<a href="./">Home</a>
 			</li>
-			<li aria-current={$page.url.pathname.endsWith('/about') ? 'page' : undefined}>
-				<a href="./about">About Me</a>
+			<li aria-current={$page.url.pathname.endsWith('/about.html') ? 'page' : undefined}>
+				<a href="./about.html">About Me</a>
 			</li>
-			<li aria-current={$page.url.pathname.endsWith('/projects') ? 'page' : undefined}>
-				<a href="./projects">Projects</a>
+			<li aria-current={$page.url.pathname.endsWith('/projects.html') ? 'page' : undefined}>
+				<a href="./projects.html">Projects</a>
 			</li>
-			<li aria-current={$page.url.pathname.endsWith('/reflection') ? 'page' : undefined}>
-				<a href="./reflection">Reflection</a>
+			<li aria-current={$page.url.pathname.endsWith('/reflection.html') ? 'page' : undefined}>
+				<a href="./reflection.html">Reflection</a>
 			</li>
 		</ul>
 	</nav>

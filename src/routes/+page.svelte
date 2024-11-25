@@ -9,7 +9,7 @@
 	<div class="flex h-full w-full flex-col gap-4 md:flex-row">
 		<!-- About Section -->
 		<a
-			href="./about"
+			href="./about.html"
 			class="group relative flex flex-1 flex-col items-center justify-center overflow-hidden transition-all duration-500 hover:flex-[1.3]"
 		>
 			<!-- svelte-ignore a11y_img_redundant_alt -->
@@ -26,7 +26,7 @@
 
 		<!-- Projects Section -->
 		<a
-			href="./projects"
+			href="./projects.html"
 			class="group relative flex flex-[1.2] flex-col items-center justify-center overflow-hidden transition-all duration-500 hover:flex-[1.5]"
 		>
 			<div class="relative">
@@ -49,7 +49,7 @@
 
 		<!-- Reflections Section -->
 		<a
-			href="./reflection"
+			href="./reflection.html"
 			class="group relative flex flex-[1.2] flex-col items-center justify-center overflow-hidden transition-all duration-500 hover:flex-[1.5]"
 		>
 			<img
