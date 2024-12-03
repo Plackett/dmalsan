@@ -17,6 +17,6 @@
 		<TitleScreen {startGame} />
 	{/if}
 	{#if screen === 'scenario'}
-		<Scenario/>
+		<Scenario />
 	{/if}
 </main>

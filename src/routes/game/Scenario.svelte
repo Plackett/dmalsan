@@ -338,14 +338,12 @@
 					break;
 
 				case 3: // Conditional Automation
-					if(Math.random() < 0.3)
-					{
+					if (Math.random() < 0.3) {
 						// Update car angle (turning)
 						if (turnLeft) angle = Math.max(angle - turnSpeed, -maxAngle);
 						if (turnRight) angle = Math.min(angle + turnSpeed, maxAngle);
 						applySpeed();
-					} else
-					{
+					} else {
 						if (speed < maxSpeed) {
 							speed += acceleration;
 						} else if (speed > maxSpeed) {
@@ -361,14 +359,12 @@
 					} else if (speed > maxSpeed) {
 						speed -= friction;
 					}
-					if(Math.random() < 0.1)
-					{
+					if (Math.random() < 0.1) {
 						// Update car angle (turning)
 						if (turnLeft) angle = Math.max(angle - turnSpeed, -maxAngle);
 						if (turnRight) angle = Math.min(angle + turnSpeed, maxAngle);
 						applySpeed();
-					} else
-					{
+					} else {
 						avoidObstaclesAndCenter();
 					}
 					break;
@@ -391,9 +387,9 @@
 
 			// Find the closest cat directly ahead
 			for (const cat of cats) {
-				if (cat.y-50 < y) {
+				if (cat.y - 50 < y) {
 					// Only consider cats ahead of the car
-					const distance = y-cat.y;
+					const distance = y - cat.y;
 					if (distance < minDistance) {
 						minDistance = distance;
 						closestCat = cat;
@@ -402,11 +398,11 @@
 			}
 
 			if (closestCat) {
-				console.log("Close Cat at "+closestCat.x+","+closestCat.y);
+				console.log('Close Cat at ' + closestCat.x + ',' + closestCat.y);
 				// Determine if the cat is left or right of the car
 				const directionToCat = closestCat.x - x;
 
-				if (Math.abs(directionToCat) < 200 && y-closestCat.y < 300) {
+				if (Math.abs(directionToCat) < 200 && y - closestCat.y < 300) {
 					// Cat is dangerously close, decide direction to evade
 					if (directionToCat > 0) {
 						// Cat is to the right, turn left
@@ -418,12 +414,12 @@
 				}
 			} else {
 				const centerBias = (300 - x) * 0.01; // Bias toward center, smaller factor for smoother motion
-        		if (Math.abs(centerBias) > 0.5) {
-            		angle = Math.max(Math.min(angle + centerBias, maxAngle), -maxAngle);
-        		} else {
-            		// Straighten the car if close to the center
-            		angle = angle > 0 ? Math.max(angle - turnSpeed, 0) : Math.min(angle + turnSpeed, 0);
-        		}
+				if (Math.abs(centerBias) > 0.5) {
+					angle = Math.max(Math.min(angle + centerBias, maxAngle), -maxAngle);
+				} else {
+					// Straighten the car if close to the center
+					angle = angle > 0 ? Math.max(angle - turnSpeed, 0) : Math.min(angle + turnSpeed, 0);
+				}
 			}
 
 			// Apply movement based on updated angle
@@ -550,13 +546,49 @@
 			Level {i}: {getAutomationName(i)}: {getAutomationDesc(i)}
 		</p>
 	{/each}
-	<p class="text-black">Here are some scenarios arranged in level of automation - action format and reflections on them:</p>
-	<p class="text-black">Level 0 - braking: You slammed on the brakes to avoid hitting the cat, this is the more ethically correct answer due to it minimizing risk for others who are not involved and it avoids needlessly endangering others.</p>
-	<p class="text-black">Level 0 - moving into the other lane: You chose to swerve into the other lane to avoid hitting the cat, this is the less ethically correct answer because it puts others at risk and does not avoid harming others.</p>
-	<p class="text-black">Level 1 - do nothing: You trusted the car to stop itself, without knowing how reliable or effective it is. This is less ethical because you are not being accountable and failing to be situationally aware.</p>
-	<p class="text-black">Level 1 - brake yourself: Manually slamming on the brakes yourself is the more ethical option because you are taking accountability, showing situational awareness, and ensuring the safety of the cat.</p>
-	<p class="text-black">Level 2 - do nothing: You put your faith in the car systems to stop it before colliding with the cat, this is less ethical because the reliability of the car is not established and you have no reason to believe that it can sense the cat based on the information provided, making it a failure on your part if the car fails to stop in time.</p>
-	<p class="text-black">Level 2 - intervene: You stopped the car yourself, disregarding the car's supposed ability to handle situations like these on its own, this is more ethical because you can be confident in yourself to have done all you could and is more practical without any information on the car's reliability in situations like this.</p>
-	<p class="text-black">Level 3 - let the car do it alone: Denying the car's request for intervention is less ethical because the system's request implies that it has an issue processing the current situation and is unsure that it will take the best action.</p>
-	<p class="text-black">Level 3 - help the car out: Accepting the car's request for intervention is more ethical because you fulfill your responsibility to minimize harm and shows your responsibility and vigilance while driving.</p>
+	<p class="text-black">
+		Here are some scenarios arranged in level of automation - action format and reflections on them:
+	</p>
+	<p class="text-black">
+		Level 0 - braking: You slammed on the brakes to avoid hitting the cat, this is the more
+		ethically correct answer due to it minimizing risk for others who are not involved and it avoids
+		needlessly endangering others.
+	</p>
+	<p class="text-black">
+		Level 0 - moving into the other lane: You chose to swerve into the other lane to avoid hitting
+		the cat, this is the less ethically correct answer because it puts others at risk and does not
+		avoid harming others.
+	</p>
+	<p class="text-black">
+		Level 1 - do nothing: You trusted the car to stop itself, without knowing how reliable or
+		effective it is. This is less ethical because you are not being accountable and failing to be
+		situationally aware.
+	</p>
+	<p class="text-black">
+		Level 1 - brake yourself: Manually slamming on the brakes yourself is the more ethical option
+		because you are taking accountability, showing situational awareness, and ensuring the safety of
+		the cat.
+	</p>
+	<p class="text-black">
+		Level 2 - do nothing: You put your faith in the car systems to stop it before colliding with the
+		cat, this is less ethical because the reliability of the car is not established and you have no
+		reason to believe that it can sense the cat based on the information provided, making it a
+		failure on your part if the car fails to stop in time.
+	</p>
+	<p class="text-black">
+		Level 2 - intervene: You stopped the car yourself, disregarding the car's supposed ability to
+		handle situations like these on its own, this is more ethical because you can be confident in
+		yourself to have done all you could and is more practical without any information on the car's
+		reliability in situations like this.
+	</p>
+	<p class="text-black">
+		Level 3 - let the car do it alone: Denying the car's request for intervention is less ethical
+		because the system's request implies that it has an issue processing the current situation and
+		is unsure that it will take the best action.
+	</p>
+	<p class="text-black">
+		Level 3 - help the car out: Accepting the car's request for intervention is more ethical because
+		you fulfill your responsibility to minimize harm and shows your responsibility and vigilance
+		while driving.
+	</p>
 </div>

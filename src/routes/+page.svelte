@@ -12,16 +12,21 @@
 			href="./artifacts.html"
 			class="group relative flex flex-1 flex-col items-center justify-center overflow-hidden transition-all duration-500 hover:flex-[1.3]"
 		>
+			<span
+				class="dark:text-[var(--color-main-2) w-auto text-center text-lg font-semibold transition-all duration-500 group-hover:-translate-y-9"
+				style="color: var(--color-main-1);">Artifacts</span
+			>
 			<!-- svelte-ignore a11y_img_redundant_alt -->
 			<img
 				src="https://dmalsan.com/ENC2135/images/portrait2023.jpg"
 				alt="Picture of me!"
 				class="h-auto w-40 rounded-lg shadow-lg transition-transform duration-500 group-hover:scale-110 md:w-56 lg:w-64"
 			/>
-			<span
-				class="dark:text-[var(--color-main-2) mt-4 text-lg font-semibold"
-				style="color: var(--color-main-1);">Artifacts</span
+			<p
+				class="text-center font-serif text-lg text-slate-400 transition-all duration-500 group-hover:translate-y-9"
 			>
+				A collection of two artifacts I created during the class.
+			</p>
 		</a>
 
 		<!-- Projects Section -->
@@ -29,6 +34,10 @@
 			href="./projects.html"
 			class="group relative flex flex-[1.2] flex-col items-center justify-center overflow-hidden transition-all duration-500 hover:flex-[1.5]"
 		>
+			<span
+				class="dark:text-[var(--color-main-2) w-auto text-center text-lg font-semibold transition-all duration-500 group-hover:-translate-y-9"
+				style="color: var(--color-main-1);">Projects</span
+			>
 			<div class="relative">
 				<img
 					src="https://dmalsan.com/ENC2135/images/self-driving.jpg"
@@ -41,10 +50,11 @@
 					class="h-auto w-40 rounded-lg opacity-0 shadow-lg transition-opacity duration-500 group-hover:opacity-100 md:w-56 lg:w-72"
 				/>
 			</div>
-			<span
-				class="dark:text-[var(--color-main-2) mt-4 text-lg font-semibold"
-				style="color: var(--color-main-1);">Projects</span
+			<p
+				class="text-center font-serif text-lg text-slate-400 transition-all duration-500 group-hover:translate-y-9"
 			>
+				Revised version of Project 2 and my artifacts from Project 3 can be found here.
+			</p>
 		</a>
 
 		<!-- Reflections Section -->
@@ -52,15 +62,20 @@
 			href="./reflection.html"
 			class="group relative flex flex-[1.2] flex-col items-center justify-center overflow-hidden transition-all duration-500 hover:flex-[1.5]"
 		>
+			<span
+				class="dark:text-[var(--color-main-2) w-auto text-center text-lg font-semibold transition-all duration-500 group-hover:-translate-y-9"
+				style="color: var(--color-main-1);">Reflection</span
+			>
 			<img
 				src="https://dmalsan.com/ENC2135/images/rearview-mirror.jpg"
 				alt="Rearview Reflection"
 				class="h-auto w-40 rounded-lg shadow-lg transition-transform duration-500 group-hover:scale-110 md:w-56 lg:w-72"
 			/>
-			<span
-				class="dark:text-[var(--color-main-2) mt-4 text-lg font-semibold"
-				style="color: var(--color-main-1);">Reflections</span
+			<p
+				class="text-center font-serif text-lg text-slate-400 transition-all duration-500 group-hover:translate-y-9"
 			>
+				A short reflection of what I learned from creating this e-Portfolio.
+			</p>
 		</a>
 	</div>
 </div>
