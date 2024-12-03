@@ -9,7 +9,7 @@
 	<div class="flex h-full w-full flex-col gap-4 md:flex-row">
 		<!-- About Section -->
 		<a
-			href="./about.html"
+			href="./artifacts.html"
 			class="group relative flex flex-1 flex-col items-center justify-center overflow-hidden transition-all duration-500 hover:flex-[1.3]"
 		>
 			<!-- svelte-ignore a11y_img_redundant_alt -->
@@ -20,7 +20,7 @@
 			/>
 			<span
 				class="dark:text-[var(--color-main-2) mt-4 text-lg font-semibold"
-				style="color: var(--color-main-1);">About Me</span
+				style="color: var(--color-main-1);">Artifacts</span
 			>
 		</a>
 

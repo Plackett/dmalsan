@@ -15,8 +15,8 @@
 			<li aria-current={$page.url.pathname.endsWith('/') ? 'page' : undefined}>
 				<a href="./">Home</a>
 			</li>
-			<li aria-current={$page.url.pathname.endsWith('/about.html') ? 'page' : undefined}>
-				<a href="./about.html">About Me</a>
+			<li aria-current={$page.url.pathname.endsWith('/artifacts.html') ? 'page' : undefined}>
+				<a href="./artifacts.html">Artifacts</a>
 			</li>
 			<li aria-current={$page.url.pathname.endsWith('/projects.html') ? 'page' : undefined}>
 				<a href="./projects.html">Projects</a>
