@@ -30,11 +30,18 @@
 
 <style>
 	header {
-		overflow: visible;
-		z-index: 9;
-		justify-content: space-between;
-		top: 0;
+    	position: sticky;
+    	top: 0;
+    	z-index: 10;
+    	backdrop-filter: blur(10px);
+    	background-color: rgba(255, 255, 255, 0.7); /* Adjust for light/dark modes */
 	}
+
+	li[aria-current="page"] > a {
+    	font-weight: bold;
+    	border-bottom: 2px solid var(--color-theme-1);
+	}
+
 
 	nav {
 		display: flex;

@@ -22,19 +22,26 @@
 	<main class="flex h-full w-full flex-col items-center justify-center overflow-y-auto p-4">
 		<slot />
 	</main>
-	<footer class="flex gap-2">
+	<footer class="flex flex-wrap justify-center gap-4 py-6 text-center text-sm dark:bg-gray-900 dark:text-gray-300">
 		<p>
-			Developed using <a href="https://svelte.dev/">Sveltekit</a> and
-			<a href="https://tailwindcss.com/">Tailwind CSS</a> |
+			Built with <a href="https://svelte.dev/" class="text-blue-500 hover:underline">SvelteKit</a> &
+			<a href="https://tailwindcss.com/" class="text-blue-500 hover:underline">Tailwind CSS</a>
 		</p>
-		<a href="mailto:krinos@cs.fsu.edu">Contact</a>
-		<a href="https://www.github.com/Plackett/dmalsan">Source</a>
-		<p>&copy; Niko Krinos 2024</p>
+		<a href="mailto:krinos@cs.fsu.edu" class="hover:underline">
+			📧 Contact
+		</a>
+		<a href="https://github.com/Plackett/dmalsan" class="hover:underline">
+			🐙 Source
+		</a>
+		<p>&copy; 2024 Niko Krinos</p>
 		<a
 			href="https://github.com/Plackett/dmalsan/blob/617d734b9e12f545b36ab11cfa68a6c9788ddaba/LICENSE.md"
-			>MIT License</a
+			class="hover:underline"
 		>
+			📜 MIT License
+		</a>
 	</footer>
+	
 </div>
 
 <style>

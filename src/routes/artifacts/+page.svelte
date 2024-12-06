@@ -1,23 +1,21 @@
 <section>
 	<div class="grid grid-cols-2 gap-10">
-		<div>
+		<div class="justify-center items-center">
 			<h1 class="text-center font-serif text-2xl dark:text-[#eee]">Artifact #1</h1>
-			<p class="font-serif text-xl">
-				For artifact one I am presenting the web-based videogame I created as my first artifact in
-				Project 3
+			<p class="font-serif text-left text-xl">
+				&Tab;For artifact one I am presenting the web-based videogame I created as my first artifact in
+				&Tab;Project 3. The game is a simple endless driving game where the player must avoid hitting cats to gain karma. Additionally there are self-driving features available for them to test out while playing the game. I created this for multiple purposes: as a tool to teach more people about the different classifications of autonomous vehicles, as a fun game that can be enjoyed by younger and older audience alike, and as an example of an ethical dilemma where a crash might be inevitable even with the highest levels of automation available.
 			</p>
-			<a class="rounded bg-slate-300 pb-1 pl-3 pr-3 pt-1 font-serif" href="./game.html"
-				>Link to the artifact</a
-			>
+			<a class="pt-2 pb-2 pl-2 pr-2 bg-gray-50 font-serif" href="./game.html">Link to the artifact</a>
 		</div>
-		<div>
+		<div class="justify-center items-center">
 			<h1 class="text-center font-serif text-2xl dark:text-[#eee]">Artifact #2</h1>
 			<p class="font-serif text-xl">
-				My other artifact is a DQ from early October that I enjoyed writing and thought was worth
-				sharing:
+				&Tab;My other artifact is a DQ from early October that I enjoyed writing and thought was worth
+				sharing. The prompt that was given to me for this question asked me to reflect on an assignment from a previous english class where feedback helped me improve. I wanted to include this piece not only because I think it is one of my best DQ answers but also because the book I mentioned is good and I think more people should read it.
 			</p>
-			<p class="rounded bg-slate-300 pb-1 pl-3 pr-3 pt-1 font-serif">
-				When I was writing an analysis of "The Yellow Wallpaper" by Charlotte Perkins Gilman for an
+			<p class="text-left rounded px-4 py-8 bg-gray-50 font-serif dark:text-black">
+				&Tab;When I was writing an analysis of "The Yellow Wallpaper" by Charlotte Perkins Gilman for an
 				English class, I found myself stuck trying to find symbolism in objects that were not
 				significant. I looked in too deeply and overanalyzed the story, but when I got my sister
 				Larissa to look at my writing she gave me the best advice I could have asked for, less is
