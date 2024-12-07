@@ -11,20 +11,33 @@
         
         <!-- Reflection Content -->
         <p class="text-lg leading-8 text-gray-700 dark:text-gray-300 font-serif">
-			The process of creating this e-portfolio has been beneficial to my growth as an author, web designer, and student. 
-			This is evident in every page of this portfolio, from the home page I created first, to this reflection page which was the last one I made, each page's development history demonstrates my progress over time. 
-			Although I have gone over and revised every page on this website, I did not change the underlying structure, keeping it the same way that I started it. 
-			I believe this choice shows how initial ideas stay relevant even with revision and better execution.
+			The process of creating the three projects and this e-portfolio has been beneficial to my growth as an author, web designer, and student. 
+			Starting with the concepts I learned, in project one I learned what a discourse community is, adding to my existing vocabulary and helping me write in the style of a research paper.
+			This statement can also be applied to project two where I learned that the word "I" is allowed in research settings, where previously I thought it was looked down upon because of how simple it sounds.
+			The concept I learned in project three was genre, I was under the impression that genre was types of books, not encompassing any type of media.
+			And finally in project four I was informed of composing practices for the descriptions of my artifacts I was not previously aware of.
 		</p>
 
 		<p class="mt-4 text-lg leading-8 text-gray-700 dark:text-gray-300 font-serif">
-			Additionally, over the development of this page and this very reflection, I uploaded my everyday progress on the Source area linked in the footer on every page of the site. 
-			Working on the project this way allowed me to add notes and documentation for every significant change I made and find an old revision of the website if I didn't like a newer revision. 
-			This archive of my work functions as transparency to the users of the website as well since they can see the code behind the site and take it for themselves to modify if they desire.
+			In the future my writing will be more research-oriented, with a focus on rhetoric and getting my point across in a way that utilizes rhetorical appeals and evidence.
+			Specifically I will use proper conventions when discussing genre and discourse groups.
+			To elaborate, I will feel confident in my ability to describe a paper with more than just the words essay or piece and more comfortable using genre descriptions like commerical editorial or educational website article.
+		</p>
+
+		<p class="mt-4 text-lg leading-8 text-gray-700 dark:text-gray-300 font-serif">
+			Next, all of these projects combined show how capable of a writer I am, directly showing the thought process I use when developing a topic.
+			I learned that I enjoy strict guidelines over open assignments and that I can write even though I often don't want to.
+		</p>
+
+		<p class="mt-4 text-lg leading-8 text-gray-700 dark:text-gray-300 font-serif">
+			For the last question, I would say that my theory of writing is one that starts at the beginning, creating an interesting hook.
+			Following the hook, I write the claim or thesis based on the topic of the paper and then I fill in the bridge to funnel from the broad hook to the narrow thesis.
+			After that I start the body paragraphs, but I write the first sentence of all of them first before I start filling them in so that each one has a scope of its own.
+			Finally after filling in all of the body paragraphs I can begin writing the conclusion, taking in the entire essay and summarizing it concisely.
 		</p>
 
         <p class="mt-4 text-lg leading-8 text-gray-700 dark:text-gray-300 font-serif">
-            There were some initial hurdles when making the website, especially with the home page because I kept having issues with navigation and the image animations. 
+            Now for some reflection on just the e-portfolio, there were some initial hurdles when making the website, especially with the home page because I kept having issues with navigation and the image animations. 
 			Thankfully all of the problems were rectified with time and I was able to fix them with ease. 
 			Following these homepage issues, I started creating pages based on what I saw on previous classes' e-Portfolios but quickly realized that some pages were unnecessary. 
 			A good example of this is the About Me page which I originally included and is on most e-Portfolios. 
