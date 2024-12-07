@@ -4,7 +4,7 @@
 
 	let screen = 'title';
 
-	let title = "The Cat Conjecture";
+	let title = 'The Cat Conjecture';
 
 	function startGame() {
 		screen = 'scenario';
