@@ -1,3 +1,7 @@
+<script>
+	let title="Reflection";
+</script>
+
 <section class="w-full px-4 py-8 bg-gray-50 dark:bg-gray-800">
     <div class="max-w-3xl mx-auto">
         <!-- Reflection Title -->

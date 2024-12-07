@@ -1,3 +1,8 @@
+<script>
+    let title="Artifacts"        
+</script>
+
+
 <section>
 	<div class="grid grid-cols-2 gap-10">
 		<div class="justify-center items-center">

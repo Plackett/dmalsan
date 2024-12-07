@@ -1,5 +1,6 @@
 <script>
     import Icon from '@iconify/svelte';
+	let title="Projects";
 </script>
 
 <!-- Scroll Down Icon -->
@@ -28,7 +29,7 @@
         <!-- Project 2 PDF -->
         <object
             title="Project 2"
-            data="./proj2.pdf"
+            data="./proj2rev.pdf"
             type="application/pdf"
             class="w-full h-[30rem] md:h-[46rem] md:w-[36rem] rounded-lg shadow-md border border-gray-300"
         ></object>

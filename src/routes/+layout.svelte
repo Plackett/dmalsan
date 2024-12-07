@@ -14,6 +14,8 @@
 		easing: linear,
 		axis: 'x'
 	};
+
+	let title = "Home";
 </script>
 
 <div class="app max-w-screen min-h-screen">
